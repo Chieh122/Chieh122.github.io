@@ -1,0 +1,306 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+            <script>
+            $(document).ready(function(){
+                $(".slider").bxSlider();
+            });
+            </script>
+            <link href="lightbox.min.css" rel="stylesheet" />
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+                body{
+                    font-family: 'Anton',sans-serif;
+                    margin:0;
+                    background-color: #3d3d3d;
+                }
+                .wrap{
+                    width: 940px;
+                    height: 560px;
+                    margin: 20px auto;
+                }
+                h2{
+                    font-weight: 940px;
+                    margin: 20px 0;
+                }
+                .main-img{
+                    color: #494a4a;
+                    font-size: 30px;
+                    width: 100%;
+                    height: 2200px;
+                    padding: 10px 30px;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                    background-color: #dad7cd;
+                }
+                header{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    padding: 0px 30px;
+                    border-radius: 20px;
+                    background-color: #dad7cd;
+                    display: flex;
+                    align-items: center;/* 上下居中 */
+                    /* position: sticky; */
+                    top: 20px;
+                    box-shadow: 0 0 10px 0 black;
+                }
+                header a{
+                    color: #494a4a;
+                    display: block;
+                    text-decoration: none;
+                }
+                header h1{
+                    margin-right: auto;
+                    /* 讓menu到最右邊去 */
+                }
+                .slider{
+                    width: 800px;
+                    height: 300px;
+                    text-align: center;
+                }
+                ul.menu{
+                    display: flex;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    gap: 12px;
+                }
+                ul.menu a{
+                    padding: 10px 20px;
+                }
+                ul.menu a:hover{
+                    /* 當滑鼠移上去的狀態 */
+                    background-color: #999999;
+                    border-radius: 20px;
+                }
+                .sq {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 10px;
+                }
+
+                .grid-item {
+                    width: 300px;
+                    height: 300px;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+
+                .grid-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .grid-item:hover {
+                    transform: scale(1.2);
+                }
+
+                .grid-item.expanded {
+                    width: 600px;
+                    height: 600px;
+                }
+
+                .grid-item.expanded img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                footer{
+                    color: #acacac;
+                    background-color: #dad7cd;
+                    border-radius: 20px;
+                    padding: 20px 20px 20px 800px;
+                }
+                .portfolio {
+                    display: flex;
+                    flex-wrap: wrap; /* 讓超出寬度的內容折行 */
+                    justify-content: space-between; /* 在每行之間平均分配空間 */
+                    align-items: flex-start; /* 開始對齊，確保每行頂部對齊 */
+                    width: 800px; /* 調整區塊的寬度，根據需要修改 */
+                    margin: 0 auto; /* 讓區塊居中 */
+                    gap: 1px;
+                }
+
+                .portfolio div {
+                    width: 200px; /* 設定每個子元素的寬度，可根據需要修改 */
+                    margin-bottom: 16px; /* 設定每個子元素之間的間距，可根據需要修改 */
+                    box-sizing: border-box; /* 確保寬度包括內邊距和邊框 */
+                }
+                .portfolio a {
+                    display: block;/*因為超連結不是區塊所以．．．*/
+                    overflow: hidden;/*隱藏超出範圍的內容*/
+                    transition: 0.2s;/*轉場效果*/
+                }
+                .portfolio a:hover {
+                    box-shadow: 0 0 0 8px rgb(243, 232, 173);/*製作滑鼠移上去的紅色外框*/
+                }
+
+                .portfolio img {
+                    display: block;/*因為圖片不是區塊所以．．．*/
+                    width: 200px; height: 200px;/*設定圖片尺寸*/
+                    object-fit: cover;/*讓圖片寬度套用上述尺寸(因為原圖比較大)*/
+                    opacity: 0.7;/*設定透明度*/
+                    transition: 0.2s;/*轉場效果*/
+                    
+                }
+                .portfolio a:hover img {
+                    opacity: 1;/*設定滑鼠移上去之後的透明度*/
+                    transform: scale(1.2);/*設定滑鼠移上去之後的圖片大小*/
+                }
+
+                .lb-data .lb-caption {
+                    font-size: 16px;
+                }
+
+                element.style {
+                    height: 600px;
+                }
+                .bx-wrapper{
+                    height: 800px;
+                }
+                .bx-viewport{
+                    height: 600px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="wrap">
+                <header>
+                    <h1 class="logo"><a href="index.htm"><img src="image/Subject.png" alt="標誌" style="width: 50px; ;">Ahu's Life</a></h1>
+                    <ul class="menu">
+                        <li><a href="about.htm">ABOUT</a></li>
+                        <li><a href="food.htm">FOOD</a></li>
+                        <li><a href="variety.htm">VARIETY</a></li>
+                        
+                    </ul>
+                </header>
+                <section class="main-img">
+                <div class="slider">
+                    <div><img src="image/02.png" alt="">sleepy ahu.</div>
+                    <div><img src="image/IMG_1696.png" alt="">cute ahu.</div>
+                    <div><img src="image/002.png" alt="">lazy ahu.</div>
+                    <div><img src="image/IMG_1349.png" alt="">hat ahu.</div>
+                </div>
+                
+                <section class="portfolio">
+                    <div>
+                        <a href="image/04.png" data-lightbox="huhu" data-title="躺在媽咪的推車上真蘇胡～">
+                            <img src="image/04.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/03.png" data-lightbox="christmas" data-title="媽咪的睡衣就是我的被被">
+                            <img src="image/03.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/05.png" data-lightbox="christmas" data-title="我的小牙齒">
+                            <img src="image/05.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/01.png" data-lightbox="christmas" data-title="戴帽帽的我">
+                            <img src="image/01.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/06.png" data-lightbox="christmas" data-title="看看我的大屁屁">
+                            <img src="image/06.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/07.png" data-lightbox="christmas" data-title="迫不及待要開動了">
+                            <img src="image/07.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/08.png" data-lightbox="christmas" data-title="看看辣是什魔！">
+                            <img src="image/08.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/09.png" data-lightbox="christmas" data-title="我睡死了">
+                            <img src="image/09.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/10.png" data-lightbox="christmas" data-title="草地胖兔是我！">
+                            <img src="image/10.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/11.png" data-lightbox="christmas" data-title="剛結紮的我">
+                            <img src="image/11.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/12.png" data-lightbox="christmas" data-title="大鼻孔的我">
+                            <img src="image/12.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/13.png" data-lightbox="christmas" data-title="挖一下鼻孔被發現了">
+                            <img src="image/13.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/14.png" data-lightbox="christmas" data-title="是在看我嗎？">
+                            <img src="image/14.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/15.png" data-lightbox="christmas" data-title="媽咪帶我出門溜搭溜搭">
+                            <img src="image/15.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/16.png" data-lightbox="christmas" data-title="靠在媽咪的肩膀上真蘇胡～～">
+                            <img src="image/16.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/17.png" data-lightbox="christmas" data-title="倫家可是網美誒！拍這什麼死亡角度！">
+                            <img src="image/17.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/18.png" data-lightbox="christmas" data-title="是什麼好吃的！我聞聞">
+                            <img src="image/18.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="image/19.png" data-lightbox="christmas" data-title="Christmas Collection 01">
+                            <img src="image/19.png" alt="">
+                        </a>
+                    </div>
+                
+                </section>
+                </section>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const gridItems = document.querySelectorAll('.grid-item');
+            
+                        gridItems.forEach(item => {
+                            item.addEventListener('click', function () {
+                                this.classList.toggle('expanded');
+                            });
+                        });
+                    });
+                </script>
+               
+
+            </div>
+        <script src="lightbox-plus.min.js"></script>
+        </body>
+        </html>

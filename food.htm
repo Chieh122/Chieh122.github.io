@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        body{
+            font-family: 'Anton',sans-serif;
+            margin:0;
+            background-color: #3d3d3d;
+        }
+        .wrap{
+            width: 1000px;
+            height: 560px;
+            margin: 20px auto;
+        }
+        h2{
+            font-weight: 940px;
+            margin: 20px 0;
+        }
+        section{
+            color: #494a4a;
+            font-size: 30px;
+            width: 1000px;
+            height: 1000px;
+            padding: 10px 30px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            background-color: #dad7cd;
+        }
+        header{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0px 30px;
+            border-radius: 20px;
+            background-color: #dad7cd;
+            display: flex;
+            align-items: center;/* 上下居中 */
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 0 10px 0 black;
+        }
+        header a{
+            color: #494a4a;
+            display: block;
+            text-decoration: none;
+        }
+        header h1{
+            margin-right: auto;
+            /* 讓menu到最右邊去 */
+        }
+        ul.menu{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 12px;
+        }
+        ul.menu a{
+            padding: 10px 20px;
+        }
+        ul.menu a:hover{
+            /* 當滑鼠移上去的狀態 */
+            background-color: #999999;
+            border-radius: 20px;
+        }
+        .boximg01{
+            display: flex;
+        }
+        .eat{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="index.htm"><img src="image/Subject.png" alt="標誌" style="width: 50px; ;">Ahu's Life</a></h1>
+            <ul class="menu">
+                <li><a href="about.htm">ABOUT</a></li>
+                <li><a href="food.htm">FOOD</a></li>
+                <li><a href="variety.htm">VARIETY</a></li>
+                
+            </ul>
+        </header>
+       
+        <section id="food">
+            <div class="small-title">
+                <h2> Food</h2>
+            </div>
+            <div class="box01">
+                <div class="boximg01">
+                    <img src="image/IMG_0999.PNG" style="width: 180px; float: left;">
+                    <p>彩食健美是獸醫師推薦的飼料，裡面不含水果成分的東西，對兔子來說不會造成負擔。</p>
+                </div>
+            </div>
+            <div class="box02">
+                <div class="boximg02">
+                    <img src="image/主題.png" style="width: 180px;float:right;">
+                    <p class="eat">提摩西二割是所有成兔的主食，他們一天所吃的東西百分之九十都是吃草，一天只能給他們一個拳頭大小的零食。</p>
+
+                </div>
+            </div>
+            <div class="box03">
+                <div class="boximg03">
+                    <img src="image/s.png" style="width: 180px; float: left;">
+                    <p>這種零食是我最常買給阿呼呼吃的零食，既可以當零食也可以磨牙。</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-text">
+            @cychieh 2024
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
